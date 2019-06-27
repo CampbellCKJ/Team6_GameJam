@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
 using UnityEngine.UI;
+
 public class scoreKeeper : MonoBehaviour
 {
     public int coins;
@@ -12,11 +13,13 @@ public class scoreKeeper : MonoBehaviour
     private List<int> bestCoins;
     private List<Stopwatch> bestTime;
     public GameObject coinText;
-    //public TMPro.Textr
-
+    public int totalCoins;
     // Start is called before the first frame update
     void Start()
     {
+        //PlayerPrefs.DeleteKey("totalCoins");
+        totalCoins = PlayerPrefs.GetInt("totalCoins");
+
         timer = new Stopwatch();
 
         timer.Start();
@@ -26,14 +29,18 @@ public class scoreKeeper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         timerText.text = "" + timer.Elapsed;
         coinText.GetComponent<TMPro.TextMeshPro>().text = "" + coins;
+
     }
 
     public void addCoins()
     {
         coins++;
-
+        PlayerPrefs.SetInt("totalCoins", totalCoins + 1);
+        totalCoins = PlayerPrefs.GetInt("totalCoins");
+        UnityEngine.Debug.Log(totalCoins);
     }
 
     public void startTimer()
