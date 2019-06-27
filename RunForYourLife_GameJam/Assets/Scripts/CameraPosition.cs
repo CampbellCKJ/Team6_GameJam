@@ -12,7 +12,7 @@ public class CameraPosition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = Player.position + (Vector3.up * offset);
+        transform.position = Player.position + new Vector3(offset, offset, 0);
         //transform.Translate(new Vector3(offset, 0, 0));
     }
 }
