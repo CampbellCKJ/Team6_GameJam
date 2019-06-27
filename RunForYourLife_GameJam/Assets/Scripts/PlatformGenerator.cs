@@ -13,7 +13,7 @@ public class PlatformGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        platformwidth = Platform.GetComponent<BoxCollider>().size.x;
+        platformwidth = Platform.transform.localScale.x;
 	}
 	
 	// Update is called once per frame
