@@ -25,7 +25,7 @@ public class menuButtons : MonoBehaviour
 
         mainMenu.SetActive(false);
         ScoreKeeper.startTimer();
-        player.toggleControlsEnabled();
+        //player.toggleControlsEnabled();
     }
     public void quitButton()
     {
@@ -36,6 +36,7 @@ public class menuButtons : MonoBehaviour
         statsMenu.SetActive(true);
 
         mainMenu.SetActive(false);
+        ScoreKeeper.updateStats();
     }
     public void backtoMain()
     {
