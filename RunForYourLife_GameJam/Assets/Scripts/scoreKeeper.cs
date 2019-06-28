@@ -18,6 +18,8 @@ public class scoreKeeper : MonoBehaviour
     public Text highestCoin;
     public Text highestTime;
     public Text totalCoinage;
+    public Text lastrunCoins;
+    public Text lastrunTime;
     public int time;
     public menuButtons MenuButtons;
     public Player player;
@@ -69,6 +71,8 @@ public class scoreKeeper : MonoBehaviour
 
     public void runEnded()
     {
+        lastrunCoins.text = "" + coins;
+        lastrunTime.text = "" + timerQ.ElapsedMilliseconds / 1000;
         timerQ.Stop();
         time = (int)timerQ.ElapsedMilliseconds / 1000;
         timerQ.Reset();
