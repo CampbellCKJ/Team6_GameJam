@@ -19,5 +19,8 @@ public class FollowPlayer : MonoBehaviour
         target.position = new Vector3(target.position.x, transform.position.y, target.position.z);
         transform.LookAt(target);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        speed = speed + 0.0001f;
     }
+
+
 }
