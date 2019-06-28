@@ -1246,6 +1246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: userInterface
       objectReference: {fileID: 0}
+    - target: {fileID: 6733087369106407834, guid: 5e801720b5ed8c9488565353f1f38d7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6733087368779717201, guid: 5e801720b5ed8c9488565353f1f38d7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1524,10 +1529,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6733087369106407834, guid: 5e801720b5ed8c9488565353f1f38d7b,
+    - target: {fileID: 6733087368994839075, guid: 5e801720b5ed8c9488565353f1f38d7b,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1663719833}
+    - target: {fileID: 6733087368994839075, guid: 5e801720b5ed8c9488565353f1f38d7b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: updateStats
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e801720b5ed8c9488565353f1f38d7b, type: 3}
