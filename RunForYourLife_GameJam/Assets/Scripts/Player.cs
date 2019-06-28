@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public float jumpforce = 8f;
     public float gravity = 30f;
     private Vector3 moveDir = Vector3.zero;
-
+    public bool controlsEnabled = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,21 +19,22 @@ public class Player : MonoBehaviour
     void Update()
     {
         CharacterController controller = gameObject.GetComponent<CharacterController>();
-
-        if (controller.isGrounded)
+        if (controlsEnabled)
         {
-            moveDir = new Vector3(1, 0, -Input.GetAxis("Horizontal"));
-
-            moveDir = transform.TransformDirection(moveDir);
-
-            moveDir *= speed;
-
-            if (Input.GetButtonDown("Jump"))
+            if (controller.isGrounded)
             {
-                moveDir.y = jumpforce;
+                moveDir = new Vector3(1, 0, -Input.GetAxis("Horizontal"));
+
+                moveDir = transform.TransformDirection(moveDir);
+
+                moveDir *= speed;
+
+                if (Input.GetButtonDown("Jump"))
+                {
+                    moveDir.y = jumpforce;
+                }
             }
         }
-
 
         moveDir.y -= gravity * Time.deltaTime;
         controller.Move(moveDir * Time.deltaTime);
