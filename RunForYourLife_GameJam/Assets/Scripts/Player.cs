@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
         if (controller.isGrounded)
         {
-            moveDir = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal"));
+            moveDir = new Vector3(1, 0, -Input.GetAxis("Horizontal"));
 
             moveDir = transform.TransformDirection(moveDir);
 
