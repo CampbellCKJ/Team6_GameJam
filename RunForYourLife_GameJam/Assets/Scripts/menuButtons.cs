@@ -11,13 +11,14 @@ public class menuButtons : MonoBehaviour
     public GameObject statsMenu;
     public scoreKeeper ScoreKeeper;
     public Player player;
+    public GameObject enemy;
     // Start is called before the first frame update
 
     private void Start()
     {
-        ScoreKeeper = GameObject.FindWithTag("Player").GetComponent<scoreKeeper>();
-        player = GameObject.FindWithTag("Player").GetComponent<Player>();
-
+        //ScoreKeeper = GameObject.FindWithTag("Player").GetComponent<scoreKeeper>();
+        //player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        enemy.SetActive(false);
     }
     public void startButton()
     {
@@ -25,7 +26,8 @@ public class menuButtons : MonoBehaviour
 
         mainMenu.SetActive(false);
         ScoreKeeper.startTimer();
-        //player.toggleControlsEnabled();
+        player.controlsEnabled = true;
+        enemy.SetActive(true);
     }
     public void quitButton()
     {

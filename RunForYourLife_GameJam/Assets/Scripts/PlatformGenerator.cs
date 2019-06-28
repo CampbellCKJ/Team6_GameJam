@@ -21,6 +21,7 @@ public class PlatformGenerator : MonoBehaviour {
         if (transform.position.x > GenerationPoint.position.x)
         {
             transform.position = new Vector3(transform.position.x - platformwidth, transform.position.y, transform.position.z);
+
             platformSelector = Random.Range(0, Platforms.Length);
 
             Instantiate(Platforms[platformSelector], transform.position, transform.rotation);
