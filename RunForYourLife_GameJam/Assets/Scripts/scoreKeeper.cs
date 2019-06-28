@@ -71,8 +71,8 @@ public class scoreKeeper : MonoBehaviour
 
     public void runEnded()
     {
-        lastrunCoins.text = "" + coins;
-        lastrunTime.text = "" + timerQ.ElapsedMilliseconds / 1000;
+        lastrunCoins.text = "Coins Collected: " + coins;
+        lastrunTime.text = "Seconds Survived: " + timerQ.ElapsedMilliseconds / 1000;
         timerQ.Stop();
         time = (int)timerQ.ElapsedMilliseconds / 1000;
         timerQ.Reset();
