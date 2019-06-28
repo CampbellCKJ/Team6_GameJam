@@ -10,9 +10,7 @@ public class currencyPickup : MonoBehaviour
     public GameObject coinUI;
     private void Start()
     {
-        ScoreKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<scoreKeeper>();
-
-        coinUI = GameObject.FindGameObjectWithTag("coinUI");
+        //coinUI = GameObject.FindGameObjectWithTag("coinUI");
     }
 
     private void Update()
@@ -23,9 +21,7 @@ public class currencyPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            coinUI = GameObject.FindGameObjectWithTag("coinUI");
-
-            //other.GetComponent<AudioSource>().Play(0);
+            other.GetComponent<AudioSource>().Play(0);
             ScoreKeeper = other.gameObject.GetComponent<scoreKeeper>();
             ScoreKeeper.addCoins();
             Instantiate(prefabSFX, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
