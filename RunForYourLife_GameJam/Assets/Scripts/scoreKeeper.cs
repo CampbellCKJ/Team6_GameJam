@@ -19,6 +19,7 @@ public class scoreKeeper : MonoBehaviour
     public Text highestTime;
     public Text totalCoinage;
     public int time;
+    public menuButtons MenuButtons;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +69,8 @@ public class scoreKeeper : MonoBehaviour
     {
         timerQ.Start();
         coins = 0;
+        coinText.GetComponent<TMPro.TextMeshProUGUI>().text = "" + coins;
+
     }
 
     public void runEnded()
@@ -83,6 +86,8 @@ public class scoreKeeper : MonoBehaviour
         PlayerPrefs.SetInt("highestCoinage", Mathf.Max(bestCoins.ToArray()));
         PlayerPrefs.SetInt("highestTimed", Mathf.Max(bestTimeMS.ToArray()));
         coins = 0;
+        MenuButtons.backtoMain();
+
     }
 
     public void updateStats()

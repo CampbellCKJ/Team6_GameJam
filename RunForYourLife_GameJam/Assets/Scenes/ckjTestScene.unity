@@ -423,6 +423,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4963831293195543960}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &406997688 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3687262918271897869, guid: 5e801720b5ed8c9488565353f1f38d7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4963831293195543960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba9cb6db4652f54ca634d6c3fdaaefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &594671666
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +478,7 @@ MonoBehaviour:
   highestTime: {fileID: 8764936765936829617}
   totalCoinage: {fileID: 2113841752}
   time: 0
+  MenuButtons: {fileID: 406997688}
 --- !u!65 &594671668
 BoxCollider:
   m_ObjectHideFlags: 0
